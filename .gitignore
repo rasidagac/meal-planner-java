@@ -1,0 +1,14 @@
+# Project exclude paths
+/.gradle/
+/Meal Planner (Java)/task/build/
+/Topics/ArrayList/Find the nearest number/out/
+/Topics/ArrayList/Find the nearest number/out/production/classes/
+
+# course config files
+*.yaml
+
+# gradle config
+build
+
+# idea config
+.idea
