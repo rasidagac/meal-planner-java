@@ -1,8 +1,8 @@
 # Project exclude paths
 /.gradle/
 /Meal Planner (Java)/task/build/
-/Topics/ArrayList/Find the nearest number/out/
-/Topics/ArrayList/Find the nearest number/out/production/classes/
+/Meal Planner (Java)/task/out/
+/Meal Planner (Java)/task/test/
 
 # course config files
 *.yaml
