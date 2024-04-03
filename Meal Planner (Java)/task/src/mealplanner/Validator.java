@@ -1,20 +1,17 @@
 package mealplanner;
 
+import mealplanner.model.Plan;
+import mealplanner.service.MealService;
+import mealplanner.service.PlanService;
+
 import java.util.Arrays;
 import java.util.List;
 
 public class Validator {
 
-    static final String validRegex = "^[a-zA-Z ]+$";
-    static final List<String> validActions = Arrays.asList("add", "show", "exit");
-    static final List<String> validCategories = Arrays.asList("breakfast", "lunch", "dinner");
-    public static boolean validateCategory(String category) {
-        return validCategories.contains(category);
-    }
+    private static final String validRegex = "^[a-zA-Z ]+$";
 
-    public static boolean validateAction(String action) {
-        return validActions.contains(action);
-    }
+    static PlanService planService = new PlanService();
 
     public static boolean validateName(String name) {
         return !name.isEmpty() && name.matches(validRegex);
@@ -27,5 +24,12 @@ public class Validator {
             }
         }
         return true;
+    }
+
+    public static boolean validateIsPlanned() {
+        String getAllPlans = "SELECT * FROM plan";
+        List<Plan> plans = planService.getAll(getAllPlans);
+
+        return !plans.isEmpty();
     }
 }

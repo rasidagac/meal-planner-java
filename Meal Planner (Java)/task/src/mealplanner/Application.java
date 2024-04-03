@@ -10,7 +10,7 @@ public class Application {
     public void run() {
         String action;
         do {
-            System.out.println("What would you like to do (add, show, exit)?");
+            System.out.println("What would you like to do (add, show, plan, save, exit)?");
             action = scanner.nextLine();
             actionHandler.handleAction(action);
         } while (!action.equals("exit"));
